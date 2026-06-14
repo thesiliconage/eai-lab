@@ -6,10 +6,7 @@ interface Props {
   description?: string;
 }
 
-const {
-  title,
-  description = 'EAI LAB — Embodied Intelligence Research Center.',
-} = Astro.props;
+const { title, description = 'EAI LAB — Embodied Intelligence Research Center.' } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -28,15 +25,18 @@ const {
   <title>{title}</title>
 </head>
 <body>
-  <!-- Top nav -->
-  <header class="topnav">
-    <div class="topnav-inner">
-      <a href="/" class="topnav-logo"><strong>EAI</strong> LAB</a>
-      <nav class="topnav-links">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#impact">Impact</a>
-        <a href="#contact">Contact</a>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="/" class="header-logo">EAI<span>LAB</span></a>
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" placeholder="Search topics..." id="search-input" />
+      </div>
+      <nav class="header-links">
+        <a href="/#topics">Topics</a>
+        <a href="/#about">About</a>
+        <a href="mailto:contact@mail.eailab.site">Contact</a>
       </nav>
       <button class="menu-btn" aria-label="Menu" id="menu-btn">☰</button>
     </div>
@@ -44,24 +44,70 @@ const {
 
   <!-- Mobile nav -->
   <div class="mobile-nav" id="mobile-nav">
-    <nav>
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#impact">Impact</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Navigation</div>
+      <a href="/#topics" class="sidebar-link">📚 Topics</a>
+      <a href="/#about" class="sidebar-link">ℹ️ About</a>
+      <a href="mailto:contact@mail.eailab.site" class="sidebar-link">✉️ Contact</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Research Areas</div>
+      <a href="/manipulation" class="sidebar-link">🦾 Manipulation</a>
+      <a href="/navigation" class="sidebar-link">🗺️ Navigation</a>
+      <a href="/language" class="sidebar-link">💬 Language</a>
+      <a href="/sim2real" class="sidebar-link">🔄 Sim-to-Real</a>
+      <a href="/multi-agent" class="sidebar-link">🤝 Multi-Agent</a>
+      <a href="/railway" class="sidebar-link">🚆 Railway AI</a>
+      <a href="/field" class="sidebar-link">🏗️ Field Robotics</a>
+    </div>
   </div>
 
-  <main>
-    <slot />
-  </main>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-title">Getting Started</div>
+        <a href="/" class="sidebar-link active">📖 Introduction</a>
+        <a href="/#about" class="sidebar-link">ℹ️ What is Embodied AI</a>
+        <a href="/#domains" class="sidebar-link">🔬 Core Domains</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Research Areas</div>
+        <a href="/#research" class="sidebar-link">🦾 Manipulation</a>
+        <a href="/#research" class="sidebar-link">🗺️ Navigation</a>
+        <a href="/#research" class="sidebar-link">💬 Language & Action</a>
+        <a href="/#research" class="sidebar-link">🔄 Sim-to-Real</a>
+        <a href="/#research" class="sidebar-link">🤝 Multi-Agent</a>
+        <a href="/#research" class="sidebar-link">🚆 Railway AI</a>
+        <a href="/#research" class="sidebar-link">🏗️ Field Robotics</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Impact</div>
+        <a href="/#impact" class="sidebar-link">🏥 Healthcare</a>
+        <a href="/#impact" class="sidebar-link">🏭 Industry</a>
+        <a href="/#impact" class="sidebar-link">🌾 Agriculture</a>
+        <a href="/#impact" class="sidebar-link">🔬 Science</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">More</div>
+        <a href="/#about" class="sidebar-link">👥 About Us</a>
+        <a href="mailto:contact@mail.eailab.site" class="sidebar-link">✉️ Contact</a>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <slot />
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <span>© 2026 EAI LAB</span>
+    <a href="mailto:contact@mail.eailab.site">contact@mail.eailab.site</a>
+  </footer>
 
   <script>
-    const obs = new IntersectionObserver((e) => {
-      e.forEach((el) => { if (el.isIntersecting) el.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-up').forEach((el) => obs.observe(el));
-
+    // Mobile menu
     const btn = document.getElementById('menu-btn');
     const nav = document.getElementById('mobile-nav');
     if (btn && nav) {
@@ -75,6 +121,18 @@ const {
         btn.textContent = '☰';
         document.body.style.overflow = '';
       }));
+    }
+
+    // Search filter
+    const input = document.getElementById('search-input');
+    if (input) {
+      input.addEventListener('input', (e) => {
+        const q = (e.target as HTMLInputElement).value.toLowerCase();
+        document.querySelectorAll('.topic-card').forEach((card) => {
+          const text = card.textContent?.toLowerCase() || '';
+          (card as HTMLElement).style.display = text.includes(q) ? '' : 'none';
+        });
+      });
     }
   </script>
 </body>
