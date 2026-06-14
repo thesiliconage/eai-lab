@@ -8,7 +8,7 @@ interface Props {
 
 const {
   title,
-  description = 'EAI LAB — Embodied Intelligence Research Center. Exploring how machines learn through physical interaction.',
+  description = 'EAI LAB — Embodied Intelligence Research Center.',
 } = Astro.props;
 ---
 
@@ -25,60 +25,43 @@ const {
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site?.href || 'https://www.eailab.site').href} />
-  <meta property="og:site_name" content="EAI LAB" />
-  <meta name="twitter:card" content="summary_large_image" />
   <title>{title}</title>
 </head>
 <body>
-  <!-- Mobile header -->
-  <div class="mobile-header">
-    <span class="logo-text">EAI LAB</span>
-    <button class="hamburger" aria-label="Menu" id="menu-btn">☰</button>
-  </div>
+  <!-- Top nav -->
+  <header class="topnav">
+    <div class="topnav-inner">
+      <a href="/" class="topnav-logo"><strong>EAI</strong> LAB</a>
+      <nav class="topnav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#impact">Impact</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-btn" aria-label="Menu" id="menu-btn">☰</button>
+    </div>
+  </header>
 
-  <!-- Mobile overlay -->
-  <div class="mobile-overlay" id="mobile-nav">
+  <!-- Mobile nav -->
+  <div class="mobile-nav" id="mobile-nav">
     <nav>
-      <a href="#intro">Introduction</a>
-      <a href="#directions">Research</a>
-      <a href="#domains">Domains</a>
-      <a href="#vision">Vision</a>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#impact">Impact</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 
-  <div class="page-wrapper">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="sidebar-logo">EAI LAB</div>
-      <div class="sidebar-tagline">Embodied Intelligence<br />Research Center</div>
-      <nav class="sidebar-nav">
-        <a href="#intro">Introduction</a>
-        <a href="#directions">Research</a>
-        <a href="#domains">Domains</a>
-        <a href="#vision">Vision</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="sidebar-footer">
-        <a href="mailto:contact@mail.eailab.site">contact@mail.eailab.site</a>
-        <p style="margin-top:0.5rem;">© 2026 EAI LAB</p>
-      </div>
-    </aside>
-
-    <!-- Main -->
-    <main class="main-content">
-      <slot />
-    </main>
-  </div>
+  <main>
+    <slot />
+  </main>
 
   <script>
-    // Scroll animation
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    const obs = new IntersectionObserver((e) => {
+      e.forEach((el) => { if (el.isIntersecting) el.target.classList.add('visible'); });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach((el) => obs.observe(el));
+    document.querySelectorAll('.fade-up').forEach((el) => obs.observe(el));
 
-    // Mobile menu
     const btn = document.getElementById('menu-btn');
     const nav = document.getElementById('mobile-nav');
     if (btn && nav) {
@@ -87,29 +70,12 @@ const {
         btn.textContent = open ? '✕' : '☰';
         document.body.style.overflow = open ? 'hidden' : '';
       });
-      nav.querySelectorAll('a').forEach((a) => {
-        a.addEventListener('click', () => {
-          nav.classList.remove('open');
-          btn.textContent = '☰';
-          document.body.style.overflow = '';
-        });
-      });
+      nav.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => {
+        nav.classList.remove('open');
+        btn.textContent = '☰';
+        document.body.style.overflow = '';
+      }));
     }
-
-    // Active sidebar link
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.sidebar-nav a');
-    const activateNav = () => {
-      let current = '';
-      sections.forEach((s) => {
-        if (window.scrollY >= s.offsetTop - 200) current = s.id;
-      });
-      navLinks.forEach((a) => {
-        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-      });
-    };
-    window.addEventListener('scroll', activateNav);
-    activateNav();
   </script>
 </body>
 </html>
