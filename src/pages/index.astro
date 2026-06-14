@@ -2,228 +2,261 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="EAI LAB — Embodied Intelligence Knowledge Base">
+<Layout title="EAI LAB | Embodied Intelligence Research Center">
 
-  <!-- Breadcrumb -->
-  <nav class="breadcrumb">
-    <a href="/">EAI LAB</a>
-    <span class="sep">›</span>
-    <span>Knowledge Base</span>
-  </nav>
-
-  <!-- Page header -->
-  <div class="article-header">
-    <h1>Embodied Intelligence Knowledge Base</h1>
-    <div class="article-meta">
-      <span>📚 8 research areas</span>
-      <span>🕐 Updated June 2026</span>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-content">
+      <div class="hero-badge fade-up">
+        <span class="dot"></span>
+        Embodied Intelligence Research Center
+      </div>
+      <h1 class="fade-up">
+        Machines that learn<br />
+        by <span class="cyan">touching the world</span>
+      </h1>
+      <p class="hero-desc fade-up">
+        We explore the science of giving AI a body — building machines that perceive, reason, and act through physical interaction with the real world.
+      </p>
+      <div class="hero-tags fade-up">
+        <span class="htag">Manipulation</span>
+        <span class="htag">Navigation</span>
+        <span class="htag">Perception</span>
+        <span class="htag">Language</span>
+        <span class="htag">Railway AI</span>
+        <span class="htag">Field Robotics</span>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="article-body">
-
-    <p>
-      This knowledge base covers the core concepts, research directions, and real-world applications of <strong>Embodied Intelligence</strong> — the field of building AI systems that learn through physical interaction with the world.
-    </p>
-
-    <div class="callout callout-blue">
-      <div class="callout-title">💡 What is Embodied AI?</div>
-      <p style="margin:0">Unlike cloud-based AI that processes text and images on servers, embodied agents have physical bodies. They perceive through cameras and touch, reason about spatial relationships, and act in the real world — where gravity, friction, and uncertainty cannot be ignored.</p>
+  <!-- STATS -->
+  <section class="section">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-card fade-up">
+          <div class="stat-value">8</div>
+          <div class="stat-label">Research Directions</div>
+        </div>
+        <div class="stat-card fade-up">
+          <div class="stat-value">5</div>
+          <div class="stat-label">Core Domains</div>
+        </div>
+        <div class="stat-card fade-up">
+          <div class="stat-value">6</div>
+          <div class="stat-label">Impact Areas</div>
+        </div>
+        <div class="stat-card fade-up">
+          <div class="stat-value">∞</div>
+          <div class="stat-label">Open Problems</div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Topic index cards -->
-    <h2 id="topics">Topic Index</h2>
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label fade-up">// ABOUT</div>
+      <h2 class="fade-up">What is Embodied AI?</h2>
+      <div class="about-split">
+        <div class="about-text fade-up">
+          <p>
+            Most artificial intelligence today lives behind a screen — processing text, images, and data in the cloud. <strong>Embodied AI is fundamentally different.</strong>
+          </p>
+          <p>
+            An embodied agent perceives its surroundings through cameras, touch sensors, and proprioception. It builds internal models of the world, plans actions, and physically interacts with its environment. A robot arm assembling a component, a drone inspecting infrastructure, a household robot tidying a room — these are all embodied AI.
+          </p>
+        </div>
+        <div class="about-text fade-up">
+          <p>
+            The field draws from robotics, computer vision, natural language processing, reinforcement learning, and control theory. Its central question: <strong>how do we build machines that learn to act intelligently through physical experience?</strong>
+          </p>
+          <p>
+            This question sits at one of the deepest open challenges in AI research — and its answers will reshape how we live, work, and age.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <div class="topic-grid">
-      <a href="#manipulation" class="topic-card" style="text-decoration:none;">
-        <div class="topic-icon">🦾</div>
-        <h3>Dexterous Manipulation</h3>
-        <p>Grasping, reorienting, and assembling with tactile sensing and learned motor policies.</p>
-      </a>
-      <a href="#navigation" class="topic-card" style="text-decoration:none;">
-        <div class="topic-icon">🗺️</div>
-        <h3>Autonomous Navigation</h3>
-        <p>Moving through complex, unstructured environments using multimodal perception.</p>
-      </a>
-      <a href="#language" class="topic-card" style="text-decoration:none;">
-        <div class="topic-icon">💬</div>
-        <h3>Language-Guided Action</h3>
-        <p>Grounding natural language in perception and motor planning.</p>
-      </a>
-      <a href="#sim2real" class="topic-card" style="text-decoration:none;">
-        <div class="topic-icon">🔄</div>
-        <h3>Sim-to-Real Transfer</h3>
-        <p>Closing the reality gap between simulation and physical deployment.</p>
-      </a>
-      <a href="#multiagent" class="topic-card" style="text-decoration:none;">
-        <div class="topic-icon">🤝</div>
-        <h3>Multi-Agent Systems</h3>
-        <p>Coordination, communication, and emergent strategies in robot teams.</p>
-      </a>
-      <a href="#hri" class="topic-card" style="text-decoration:none;">
-        <div class="topic-icon">🧩</div>
-        <h3>Human-Robot Interaction</h3>
-        <p>Predicting intent, respecting safety, and adapting to human behavior.</p>
-      </a>
-      <a href="#railway" class="topic-card" style="text-decoration:none;">
-        <div class="topic-icon">🚆</div>
-        <h3>Intelligent Railway</h3>
-        <p>Track inspection, predictive maintenance, and autonomous rail systems.</p>
-      </a>
-      <a href="#field" class="topic-card" style="text-decoration:none;">
-        <div class="topic-icon">🏗️</div>
-        <h3>Field Robotics</h3>
-        <p>Deploying agents in hazardous environments where humans cannot go.</p>
+  <hr class="divider" />
+
+  <!-- RESEARCH DIRECTIONS -->
+  <section class="section" id="research">
+    <div class="container">
+      <div class="section-label fade-up">// RESEARCH</div>
+      <h2 class="fade-up">Research Directions</h2>
+      <p class="section-desc fade-up">The core challenges we study — from how robots grasp objects to how fleets coordinate in the field.</p>
+
+      <div class="cards-grid">
+        <div class="card fade-up">
+          <div class="card-num">01 — MANIPULATION</div>
+          <h3>Dexterous Manipulation</h3>
+          <p>Teaching robots to grasp, reorient, and assemble objects with human-like finesse using tactile sensing and learned motor policies.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-num">02 — NAVIGATION</div>
+          <h3>Autonomous Navigation</h3>
+          <p>Enabling machines to move through complex, unstructured environments using multimodal perception and spatial reasoning.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-num">03 — LANGUAGE</div>
+          <h3>Language-Guided Action</h3>
+          <p>Bridging natural language and physical action — grounding words in perception and motor planning.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-num">04 — SIM2REAL</div>
+          <h3>Sim-to-Real Transfer</h3>
+          <p>Closing the reality gap — training in simulation and deploying on physical systems with minimal fine-tuning.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-num">05 — MULTI-AGENT</div>
+          <h3>Multi-Agent Coordination</h3>
+          <p>When multiple robots cooperate, they need communication, planning, and emergent coordination strategies.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-num">06 — HRI</div>
+          <h3>Human-Robot Collaboration</h3>
+          <p>Robots sharing space with people must predict intent, respect safety, and adapt in real time.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-num">07 — RAILWAY</div>
+          <h3>Intelligent Railway Systems</h3>
+          <p>Autonomous track inspection, predictive maintenance, obstacle detection, and intelligent dispatching.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-num">08 — FIELD</div>
+          <h3>Field Robotics</h3>
+          <p>Deploying agents in environments hazardous to humans — tunnels, offshore platforms, disaster zones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOMAINS -->
+  <section class="section" id="domains" style="background:var(--bg-panel);">
+    <div class="container">
+      <div class="section-label fade-up">// DOMAINS</div>
+      <h2 class="fade-up">Core Capabilities</h2>
+      <p class="section-desc fade-up">The three pillars that define embodied intelligence.</p>
+
+      <div class="domain-grid">
+        <div class="domain-card fade-up">
+          <div class="domain-icon">👁️</div>
+          <h3>Perception</h3>
+          <p>Interpreting raw sensory data — images, depth maps, tactile readings — into meaningful representations of the world.</p>
+        </div>
+        <div class="domain-card fade-up">
+          <div class="domain-icon">🧠</div>
+          <h3>Reasoning</h3>
+          <p>Understanding cause and effect, planning multi-step actions, and predicting how the world responds to interventions.</p>
+        </div>
+        <div class="domain-card fade-up">
+          <div class="domain-icon">🦾</div>
+          <h3>Interaction</h3>
+          <p>Physically engaging with the world — grasping, pushing, assembling — and learning from the consequences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="section">
+    <div class="container">
+      <div class="quote-block fade-up">
+        <blockquote>
+          "The next leap in AI will not come from bigger models alone, but from machines that learn through physical interaction — seeing, touching, and reasoning about the world as humans do."
+        </blockquote>
+        <cite>EAI LAB</cite>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- IMPACT -->
+  <section class="section" id="impact">
+    <div class="container">
+      <div class="panel">
+        <div class="panel-header">
+          <span>Impact on Humanity</span>
+          <span class="status"><span class="status-dot"></span> Active Research</span>
+        </div>
+        <div class="panel-body">
+          <table class="impact-table">
+            <thead>
+              <tr>
+                <th>Domain</th>
+                <th>Application</th>
+                <th>Timeline</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>🏥 Healthcare</td>
+                <td>Eldercare, rehabilitation, surgical assistance</td>
+                <td><span class="tag-green tag">Near-term</span></td>
+              </tr>
+              <tr>
+                <td>🏭 Manufacturing</td>
+                <td>Flexible automation, small-batch production</td>
+                <td><span class="tag-green tag">Near-term</span></td>
+              </tr>
+              <tr>
+                <td>🌾 Agriculture</td>
+                <td>Crop monitoring, precision spraying, harvesting</td>
+                <td><span class="tag">Mid-term</span></td>
+              </tr>
+              <tr>
+                <td>🔬 Science</td>
+                <td>Lab automation, extreme environment exploration</td>
+                <td><span class="tag">Mid-term</span></td>
+              </tr>
+              <tr>
+                <td>🏠 Daily Life</td>
+                <td>Household tasks, cooking, cleaning, organizing</td>
+                <td><span class="tag-orange tag">Long-term</span></td>
+              </tr>
+              <tr>
+                <td>🚆 Transit</td>
+                <td>Autonomous rail inspection, predictive maintenance</td>
+                <td><span class="tag-green tag">Near-term</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact" style="background:var(--bg-panel);">
+    <div class="container" style="max-width:600px; text-align:center;">
+      <div class="section-label fade-up">// CONTACT</div>
+      <h2 class="fade-up">Get in Touch</h2>
+      <p class="section-desc fade-up" style="margin-left:auto; margin-right:auto;">
+        For research inquiries, collaboration proposals, or questions about our work in embodied intelligence.
+      </p>
+      <a href="mailto:contact@mail.eailab.site" class="fade-up" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.8rem 2rem; background:var(--cyan); color:var(--bg); border-radius:var(--radius); font-weight:600; font-size:0.95rem; transition:all 0.2s;">
+        contact@mail.eailab.site →
       </a>
     </div>
+  </section>
 
-    <!-- Detailed topics -->
-    <h2 id="manipulation">Dexterous Manipulation</h2>
-    <p>
-      Manipulation is one of the oldest and hardest problems in robotics. A human hand has 27 degrees of freedom, uses tactile feedback to adjust grip force in real time, and can handle objects ranging from eggs to engine blocks. Replicating this dexterity in robots requires advances across multiple fronts.
-    </p>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Challenge</th>
-            <th>Description</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Tactile sensing</td>
-            <td>Dense touch arrays on fingertips for texture, slip, and force detection</td>
-            <td><span class="tag">Active</span></td>
-          </tr>
-          <tr>
-            <td>In-hand manipulation</td>
-            <td>Reorienting objects within a single grasp without putting them down</td>
-            <td><span class="tag-orange tag">Hard</span></td>
-          </tr>
-          <tr>
-            <td>Generalizable policies</td>
-            <td>A single policy that works across novel objects not seen during training</td>
-            <td><span class="tag-orange tag">Hard</span></td>
-          </tr>
-          <tr>
-            <td>Bimanual coordination</td>
-            <td>Two arms cooperating on tasks like opening jars or folding cloth</td>
-            <td><span class="tag">Active</span></td>
-          </tr>
-        </tbody>
-      </table>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">EAI LAB</div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#impact">Impact</a>
+          <a href="mailto:contact@mail.eailab.site">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 EAI LAB — Embodied Intelligence Research Center</div>
     </div>
+  </footer>
 
-    <h2 id="navigation">Autonomous Navigation</h2>
-    <p>
-      Navigation in the physical world is fundamentally different from routing on a map. Real environments are three-dimensional, partially observed, dynamic, and often cluttered. An embodied agent must build spatial understanding from raw sensor streams and plan paths that respect physical constraints.
-    </p>
-    <ul>
-      <li><strong>Visual SLAM</strong> — simultaneous localization and mapping using camera feeds</li>
-      <li><strong>Obstacle avoidance</strong> — real-time replanning when the environment changes</li>
-      <li><strong>Terrain classification</strong> — distinguishing walkable surfaces from hazards</li>
-      <li><strong>Social navigation</strong> — moving through human crowds without causing discomfort</li>
-    </ul>
-
-    <h2 id="language">Language-Guided Action</h2>
-    <p>
-      The gap between language and action is one of the most active frontiers in embodied AI. When a human says "hand me the blue mug," the robot must parse the instruction, locate the object visually, plan a reach-and-grasp trajectory, and execute it — all while handling ambiguity and error.
-    </p>
-    <div class="callout callout-green">
-      <div class="callout-title">Key Insight</div>
-      <p style="margin:0">Large language models can generate plans, but embodied grounding requires connecting words to physical referents — a mug is not a token, it's a 3D object with weight, position, and orientation.</p>
-    </div>
-
-    <h2 id="sim2real">Sim-to-Real Transfer</h2>
-    <p>
-      Training directly on physical robots is slow, expensive, and risky. Simulation offers unlimited parallel training with perfect state information. But simulated physics never perfectly matches reality — this gap, called the <strong>reality gap</strong>, is a central challenge.
-    </p>
-    <p>
-      Common approaches include domain randomization (varying simulation parameters so the policy learns to be robust), system identification (tuning simulation to match real dynamics), and progressive transfer (moving from coarse to fine simulation).
-    </p>
-
-    <h2 id="multiagent">Multi-Agent Coordination</h2>
-    <p>
-      When multiple robots share a workspace, they face problems that don't exist for single agents: communication bandwidth, task allocation, conflict resolution, and emergent behavior. A warehouse fleet must coordinate to avoid collisions and maximize throughput without centralized control.
-    </p>
-
-    <h2 id="hri">Human-Robot Interaction</h2>
-    <p>
-      Robots operating near humans must satisfy strict safety constraints while remaining useful. This requires predicting human intent from body language and context, maintaining safe distances and forces, and adapting behavior when a human changes their mind.
-    </p>
-
-    <h2 id="railway">Intelligent Railway Systems</h2>
-    <p>
-      Rail transit is a high-stakes domain where embodied AI can improve safety and efficiency. Autonomous inspection drones can detect track defects; predictive maintenance models can prevent failures; intelligent dispatching can optimize train flow across networks.
-    </p>
-    <ul>
-      <li>Autonomous track inspection using vision and LiDAR</li>
-      <li>Predictive maintenance from vibration and acoustic sensors</li>
-      <li>Obstacle detection on rail corridors</li>
-      <li>Energy-efficient scheduling and dispatching</li>
-    </ul>
-
-    <h2 id="field">Field Robotics</h2>
-    <p>
-      Some environments are too dangerous, remote, or repetitive for humans. Field robotics deploys embodied agents in tunnels, offshore platforms, disaster zones, and extreme climates where reliability is critical and human intervention is limited.
-    </p>
-
-    <!-- Impact -->
-    <h2 id="impact">Impact on Humanity</h2>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Domain</th>
-            <th>Application</th>
-            <th>Timeline</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>🏥 Healthcare</td>
-            <td>Eldercare, rehab assistance, surgical support</td>
-            <td><span class="tag-green tag">Near-term</span></td>
-          </tr>
-          <tr>
-            <td>🏭 Manufacturing</td>
-            <td>Flexible automation, small-batch production</td>
-            <td><span class="tag-green tag">Near-term</span></td>
-          </tr>
-          <tr>
-            <td>🌾 Agriculture</td>
-            <td>Crop monitoring, precision spraying, harvesting</td>
-            <td><span class="tag">Mid-term</span></td>
-          </tr>
-          <tr>
-            <td>🔬 Science</td>
-            <td>Lab automation, extreme environment exploration</td>
-            <td><span class="tag">Mid-term</span></td>
-          </tr>
-          <tr>
-            <td>🏠 Daily Life</td>
-            <td>Household tasks, cooking, cleaning, organizing</td>
-            <td><span class="tag-orange tag">Long-term</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="callout callout-orange">
-      <div class="callout-title">⚠️ Ethical Considerations</div>
-      <p style="margin:0">Embodied AI raises important questions about safety, employment, privacy, and accountability. Building these systems responsibly — with human oversight and inclusive design — is as important as building them well.</p>
-    </div>
-
-    <!-- About -->
-    <h2 id="about">About EAI LAB</h2>
-    <p>
-      EAI LAB is a research center dedicated to embodied intelligence. We study how machines can learn to perceive, reason, and act through physical interaction — advancing the science of giving AI a body.
-    </p>
-    <p>
-      For research inquiries or collaboration proposals, contact us at <a href="mailto:contact@mail.eailab.site">contact@mail.eailab.site</a>.
-    </p>
-
-  </div>
 </Layout>
