@@ -46,19 +46,27 @@ const { title, description = 'EAI LAB — Embodied Intelligence Research Center.
   <div class="mobile-nav" id="mobile-nav">
     <div class="sidebar-section">
       <div class="sidebar-title">Navigation</div>
-      <a href="/#topics" class="sidebar-link">📚 Topics</a>
+      <a href="/" class="sidebar-link">📖 Introduction</a>
+      <a href="/#topics" class="sidebar-link">📚 Topic Index</a>
       <a href="/#about" class="sidebar-link">ℹ️ About</a>
       <a href="mailto:contact@mail.eailab.site" class="sidebar-link">✉️ Contact</a>
     </div>
     <div class="sidebar-section">
       <div class="sidebar-title">Research Areas</div>
-      <a href="/manipulation" class="sidebar-link">🦾 Manipulation</a>
-      <a href="/navigation" class="sidebar-link">🗺️ Navigation</a>
-      <a href="/language" class="sidebar-link">💬 Language</a>
-      <a href="/sim2real" class="sidebar-link">🔄 Sim-to-Real</a>
-      <a href="/multi-agent" class="sidebar-link">🤝 Multi-Agent</a>
-      <a href="/railway" class="sidebar-link">🚆 Railway AI</a>
-      <a href="/field" class="sidebar-link">🏗️ Field Robotics</a>
+      <a href="/#manipulation" class="sidebar-link">🦾 Manipulation</a>
+      <a href="/#navigation" class="sidebar-link">🗺️ Navigation</a>
+      <a href="/#language" class="sidebar-link">💬 Language</a>
+      <a href="/#sim2real" class="sidebar-link">🔄 Sim-to-Real</a>
+      <a href="/#multiagent" class="sidebar-link">🤝 Multi-Agent</a>
+      <a href="/#hri" class="sidebar-link">🧩 Human-Robot</a>
+      <a href="/#railway" class="sidebar-link">🚆 Railway AI</a>
+      <a href="/#field" class="sidebar-link">🏗️ Field Robotics</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Impact</div>
+      <a href="/#impact" class="sidebar-link">🏥 Healthcare</a>
+      <a href="/#impact" class="sidebar-link">🏭 Industry</a>
+      <a href="/#impact" class="sidebar-link">🌾 Agriculture</a>
     </div>
   </div>
 
@@ -68,18 +76,19 @@ const { title, description = 'EAI LAB — Embodied Intelligence Research Center.
       <div class="sidebar-section">
         <div class="sidebar-title">Getting Started</div>
         <a href="/" class="sidebar-link active">📖 Introduction</a>
+        <a href="/#topics" class="sidebar-link">📚 Topic Index</a>
         <a href="/#about" class="sidebar-link">ℹ️ What is Embodied AI</a>
-        <a href="/#domains" class="sidebar-link">🔬 Core Domains</a>
       </div>
       <div class="sidebar-section">
         <div class="sidebar-title">Research Areas</div>
-        <a href="/#research" class="sidebar-link">🦾 Manipulation</a>
-        <a href="/#research" class="sidebar-link">🗺️ Navigation</a>
-        <a href="/#research" class="sidebar-link">💬 Language & Action</a>
-        <a href="/#research" class="sidebar-link">🔄 Sim-to-Real</a>
-        <a href="/#research" class="sidebar-link">🤝 Multi-Agent</a>
-        <a href="/#research" class="sidebar-link">🚆 Railway AI</a>
-        <a href="/#research" class="sidebar-link">🏗️ Field Robotics</a>
+        <a href="/#manipulation" class="sidebar-link">🦾 Manipulation</a>
+        <a href="/#navigation" class="sidebar-link">🗺️ Navigation</a>
+        <a href="/#language" class="sidebar-link">💬 Language & Action</a>
+        <a href="/#sim2real" class="sidebar-link">🔄 Sim-to-Real</a>
+        <a href="/#multiagent" class="sidebar-link">🤝 Multi-Agent</a>
+        <a href="/#hri" class="sidebar-link">🧩 Human-Robot</a>
+        <a href="/#railway" class="sidebar-link">🚆 Railway AI</a>
+        <a href="/#field" class="sidebar-link">🏗️ Field Robotics</a>
       </div>
       <div class="sidebar-section">
         <div class="sidebar-title">Impact</div>
@@ -134,6 +143,22 @@ const { title, description = 'EAI LAB — Embodied Intelligence Research Center.
         });
       });
     }
+
+    // Active sidebar link on scroll
+    const sections = document.querySelectorAll('section[id], h2[id]');
+    const sidebarLinks = document.querySelectorAll('.sidebar-link[href^="/#"]');
+    const activateLink = () => {
+      let current = '';
+      sections.forEach((s) => {
+        if (window.scrollY >= (s as HTMLElement).offsetTop - 200) current = s.id;
+      });
+      sidebarLinks.forEach((a) => {
+        const href = a.getAttribute('href');
+        a.classList.toggle('active', href === '/#' + current);
+      });
+    };
+    window.addEventListener('scroll', activateLink);
+    activateLink();
   </script>
 </body>
 </html>
