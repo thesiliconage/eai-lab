@@ -1,0 +1,219 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="EAI LAB | Embodied Intelligence Research Center">
+
+  <!-- INTRO -->
+  <section class="section" id="intro">
+    <h1 class="fade-in" style="font-size:clamp(2.2rem,5vw,3.4rem); margin-bottom:1.5rem; max-width:700px;">
+      Machines that learn<br />by touching the world.
+    </h1>
+    <p class="section-lead fade-in">
+      Embodied Intelligence is the pursuit of building machines that don't just compute — they perceive, act, and learn through physical experience. This research center explores the science of giving AI a body.
+    </p>
+    <div class="fade-in" style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:3rem;">
+      <span class="tag tag-accent">Manipulation</span>
+      <span class="tag tag-accent">Locomotion</span>
+      <span class="tag tag-accent">Perception</span>
+      <span class="tag tag-accent">Railway AI</span>
+      <span class="tag tag-accent">Field Robotics</span>
+    </div>
+    <div class="fade-in" style="max-width:700px;">
+      <p>
+        Most artificial intelligence today lives behind a screen — processing text, images, and data in the cloud. Embodied AI is fundamentally different. It asks: what happens when intelligence has a physical body? When it must deal with gravity, friction, uncertainty, and the unpredictable nature of the real world?
+      </p>
+      <p>
+        This question sits at the intersection of robotics, computer vision, natural language processing, reinforcement learning, and control theory. It is one of the deepest open challenges in AI research.
+      </p>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- RESEARCH DIRECTIONS -->
+  <section class="section section-alt" id="directions">
+    <h2 class="section-title fade-in">Research Directions</h2>
+    <p class="section-lead fade-in">
+      The core challenges we study — from how robots grasp objects to how fleets coordinate in the field.
+    </p>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:1.25rem;">
+      <article class="card fade-in">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+          <span class="tag">01</span>
+        </div>
+        <h3 style="margin-bottom:0.5rem;">Dexterous Manipulation</h3>
+        <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">
+          Teaching robots to grasp, reorient, and assemble objects with human-like finesse. This requires integrating tactile sensing, force feedback, and learned motor policies that generalize across shapes and materials.
+        </p>
+      </article>
+
+      <article class="card fade-in">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+          <span class="tag">02</span>
+        </div>
+        <h3 style="margin-bottom:0.5rem;">Autonomous Navigation</h3>
+        <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">
+          Enabling machines to move through complex, unstructured environments — cluttered rooms, rough terrain, crowded spaces — using multimodal perception and spatial reasoning.
+        </p>
+      </article>
+
+      <article class="card fade-in">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+          <span class="tag">03</span>
+        </div>
+        <h3 style="margin-bottom:0.5rem;">Language-Guided Interaction</h3>
+        <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">
+          Bridging natural language and physical action. A robot that understands "pick up the red cup" must ground words in perception, context, and motor planning.
+        </p>
+      </article>
+
+      <article class="card fade-in">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+          <span class="tag">04</span>
+        </div>
+        <h3 style="margin-bottom:0.5rem;">Sim-to-Real Transfer</h3>
+        <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">
+          Training in simulation is fast and safe, but the real world is messy. Closing the "reality gap" so that simulated skills transfer to physical robots is a central challenge.
+        </p>
+      </article>
+
+      <article class="card fade-in">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+          <span class="tag">05</span>
+        </div>
+        <h3 style="margin-bottom:0.5rem;">Multi-Agent Coordination</h3>
+        <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">
+          When multiple robots cooperate — carrying objects, covering terrain, dividing tasks — they need communication, planning, and emergent coordination strategies.
+        </p>
+      </article>
+
+      <article class="card fade-in">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+          <span class="tag">06</span>
+        </div>
+        <h3 style="margin-bottom:0.5rem;">Human-Robot Collaboration</h3>
+        <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">
+          Robots sharing space with people must predict human intent, respect safety boundaries, and adapt behavior in real time — in factories, homes, and hospitals.
+        </p>
+      </article>
+
+      <article class="card fade-in">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+          <span class="tag">07</span>
+        </div>
+        <h3 style="margin-bottom:0.5rem;">Intelligent Railway Systems</h3>
+        <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">
+          Applying embodied AI to rail transit — autonomous track inspection, predictive maintenance through sensor fusion, obstacle detection, and intelligent dispatching.
+        </p>
+      </article>
+
+      <article class="card fade-in">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+          <span class="tag">08</span>
+        </div>
+        <h3 style="margin-bottom:0.5rem;">Field Robotics</h3>
+        <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">
+          Deploying embodied agents in environments hazardous to humans — tunnels, offshore platforms, disaster zones, high-altitude infrastructure — where reliability is critical.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- DOMAINS -->
+  <section class="section" id="domains">
+    <h2 class="section-title fade-in">What is Embodied AI?</h2>
+    <p class="section-lead fade-in">
+      Traditional AI processes data on servers. Embodied AI gives intelligence a body — a robot, a vehicle, a machine that must deal with the physics of the real world.
+    </p>
+
+    <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:2rem; margin-bottom:3rem;">
+      <div class="fade-in">
+        <h3 style="font-family:var(--font-heading); margin-bottom:0.5rem;">Perception</h3>
+        <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">
+          Interpreting raw sensory data — images, depth maps, tactile readings — into meaningful representations. A robot must recognize a cup not as pixels, but as something it can grasp.
+        </p>
+      </div>
+      <div class="fade-in">
+        <h3 style="font-family:var(--font-heading); margin-bottom:0.5rem;">Reasoning</h3>
+        <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">
+          Understanding cause and effect. Planning multi-step actions. Predicting how the world responds when the robot pushes, lifts, or turns something.
+        </p>
+      </div>
+      <div class="fade-in">
+        <h3 style="font-family:var(--font-heading); margin-bottom:0.5rem;">Interaction</h3>
+        <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">
+          Physically engaging with the world — grasping, pushing, assembling — and learning from the consequences. This feedback loop is what distinguishes embodied AI from screen-based AI.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- IMPACT -->
+  <section class="section section-alt" id="vision">
+    <h2 class="section-title fade-in">Impact on Humanity</h2>
+    <p class="section-lead fade-in">
+      Embodied AI is not just a technical challenge. It will reshape how we live, work, and age.
+    </p>
+
+    <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:1.5rem;">
+      <div class="card fade-in">
+        <span class="tag tag-green" style="margin-bottom:0.75rem;">Healthcare</span>
+        <h3 style="margin-bottom:0.5rem;">Eldercare & Rehabilitation</h3>
+        <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">
+          Assistive robots helping an aging population with daily tasks, rehabilitation exercises, and companionship — extending independent living in societies facing demographic shifts.
+        </p>
+      </div>
+
+      <div class="card fade-in">
+        <span class="tag tag-orange" style="margin-bottom:0.75rem;">Industry</span>
+        <h3 style="margin-bottom:0.5rem;">Manufacturing & Logistics</h3>
+        <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">
+          Flexible, adaptive robots handling small-batch production and unpredictable warehouse conditions — making automation accessible beyond large factories.
+        </p>
+      </div>
+
+      <div class="card fade-in">
+        <span class="tag tag-green" style="margin-bottom:0.75rem;">Environment</span>
+        <h3 style="margin-bottom:0.5rem;">Agriculture & Conservation</h3>
+        <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">
+          Autonomous agents monitoring crops, managing invasive species, and operating in hazardous environments — enabling precision agriculture at scales humans alone cannot achieve.
+        </p>
+      </div>
+
+      <div class="card fade-in">
+        <span class="tag" style="margin-bottom:0.75rem;">Science</span>
+        <h3 style="margin-bottom:0.5rem;">Discovery & Exploration</h3>
+        <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">
+          Robots manipulating lab equipment, running experiments, and exploring extreme environments — accelerating chemistry, biology, and space exploration.
+        </p>
+      </div>
+
+      <div class="card fade-in" style="grid-column: 1 / -1;">
+        <span class="tag tag-orange" style="margin-bottom:0.75rem;">Society</span>
+        <h3 style="margin-bottom:0.5rem;">Daily Life & Responsibility</h3>
+        <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">
+          Household robots that cook, clean, and organize could reclaim hours of domestic labor. But embodied AI also raises important questions about safety, employment, equity, and accountability. Building these systems responsibly — with human oversight and inclusive design — is as important as building them well.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact" style="padding-bottom:6rem;">
+    <h2 class="section-title fade-in">Contact</h2>
+    <p class="fade-in" style="font-size:1rem; color:var(--text-secondary); margin-bottom:1.5rem;">
+      For research inquiries, collaboration proposals, or general questions about our work in embodied intelligence.
+    </p>
+    <a href="mailto:contact@mail.eailab.site" class="fade-in" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.75rem 1.5rem; background:var(--accent); color:#fff; border-radius:var(--radius); font-weight:600; font-size:0.9rem; transition:all 0.2s;">
+      contact@mail.eailab.site
+      <span>→</span>
+    </a>
+  </section>
+
+</Layout>
